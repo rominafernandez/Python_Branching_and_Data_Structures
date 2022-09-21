@@ -23,17 +23,17 @@ All exercises done in the branching and data structures part of Modul 1.
 * Group Exercise 03 - Manipulating lists: `ManipulateLists.py`
 
 **Data structures - Dictionaries**
-* Exercise 16 - Simple Dictionary:
-* Exercise 17 - Searching in dictionaries:
-* Exercise 18 - Protein Collection:
-* Exercise 19 - Adjusting the collection:
-* Group Exercise 04 - A big dictionary:
+* Exercise 16 - Simple Dictionary: `SimpleDict.py`
+* Exercise 17 - Searching in dictionaries: `SearchDicts.py`
+* Exercise 18 - Protein Collection: `ProteinCollection.py`
+* Exercise 19 - Adjusting the collection: `ProteinCollection.py`
+* Group Exercise 04 - A big dictionary: 
 
 **Data structures - Tuples**
-* Exercise 20 - Working with tuples:
+* Exercise 20 - Working with tuples: `Tuples.py`
 
 **Data structures - Sets**
-* Exercise 21 - Working with Sets:
+* Exercise 21 - Working with Sets:`Sets.py`
 * Exercise 22 - Adding and removing:
 
 **Data structures - Matrices**
