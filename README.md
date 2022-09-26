@@ -27,7 +27,7 @@ All exercises done in the branching and data structures part of module 1.
 * Exercise 17 - Searching in dictionaries: [`SearchDicts.py`](https://github.com/rominafernandez/Python_Branching_and_Datastructures/blob/master/SearchDicts.py)
 * Exercise 18 - Protein Collection: [`ProteinCollection.py`](https://github.com/rominafernandez/Python_Branching_and_Datastructures/blob/master/ProteinCollection.py)
 * Exercise 19 - Adjusting the collection: [`ProteinCollection.py`](https://github.com/rominafernandez/Python_Branching_and_Datastructures/blob/master/ProteinCollection.py)
-* Group Exercise 04 - A big dictionary:
+* Group Exercise 04 - A big dictionary: 
 
 **Data structures - Tuples**
 * Exercise 20 - Working with tuples: [`Tuples.py`](https://github.com/rominafernandez/Python_Branching_and_Datastructures/blob/master/Tuples.py)
