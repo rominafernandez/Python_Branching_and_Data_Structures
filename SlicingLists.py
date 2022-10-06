@@ -10,10 +10,11 @@ Ls1 = list(range(5, 50, 5))
 Ls2 = list(range(2, 40, 4))
 
 print(f"\nHere are the two Lists you can slice: \nList 1 = {Ls1} \nList 2 = {Ls2}")
-user_input = input("\nType in four numbers by which you want to slice the lists. \nThe first two numbers indicate the starting and endpoint for the first list and the second two numbers for the second list. \nSeparate them by spaces.\n").split()
+print(f"\nType in four numbers by which you want to slice the lists. \nThe first two numbers indicate the starting and endpoint for the first list and the second two numbers for the second list. \nSeparate them by spaces.\n")
+user_input = input().split()
 
 # Security check to see, if the lists can be sliced by those numbers. If not, ask once for new input
-if int(user_input[0]) > len(Ls1)-1 or  int(user_input[1]) > len(Ls1)-1 or int(user_input[2]) > len(Ls2)-1 or int(user_input[3]) > len(Ls2)-1:
+if int(user_input[0]) > len(Ls1)-1 or int(user_input[1]) > len(Ls1)-1 or int(user_input[2]) > len(Ls2)-1 or int(user_input[3]) > len(Ls2)-1:
     print(f"Your input number pairs exceed the length of the lists. \nKeep in mind that the first list has {len(Ls1)} elements and the second list has {len(Ls2)} elements.")
     user_input = input("Type in a new set of numbers.\n").split()
 
