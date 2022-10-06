@@ -18,6 +18,5 @@ print(ls2)
 
 ls1.extend(ls5)
 ls2.extend(ls6)
-
 print(ls1)
 print(ls2)
