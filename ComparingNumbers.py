@@ -21,7 +21,9 @@ elif nr1 == nr4 or nr2 == nr3:
 else:
     print("You don't like repeating yourself, don't you.")
 
+
 ## Exercise 7 - Other comparisons
+
 # Take the program from Exercise 6 and add some more statements for printing out a positive encouragement
 # Input 1 > Input 2 and Input 3 > Input 4
 # Input 1 < Input 3 and Input 2 < Input 4
@@ -29,7 +31,7 @@ else:
 # Input 1 <= Input 4 and Input2 = Input 3
 
 if nr1 > nr2 and nr3 > nr4:
-    print("Well done, your second number is bigger than your first and your last number is bigger than the third number.")
+    print("Well done, your second number is bigger than the first and your last number is bigger than the third number.")
 elif nr1 < nr3 and nr2 < nr4:
     print("Well done, Your third number is bigger than your first and your last number is bigger than your second number.")
 elif nr1 == nr4 or nr2 >= nr3:
