@@ -16,7 +16,6 @@ print("Type q to quit the program")
 
 while True:
     tmp = True
-    user_input = ""
     user_input = input("\nCreate a list: ").split()
 
 # generating of the user_list and safety checks
@@ -40,7 +39,7 @@ while True:
     while tmp == True:
         print("\nChoose from the following options: add, remove, reverse, index, check. \nType new, if you want to create a new list and q if you want to quit the program.")
         user_op = input("Type in the option: ")
-# First manipulation: Adding elements
+        # First manipulation: Adding elements
         if user_op == "add" or user_op == "Add":
             print("Type in the number you want to add and the position you want to add it in (separated by space).")
             print("If your index exceeds the length of your list, the element will be added to the end of the list.")
@@ -56,7 +55,7 @@ while True:
             else:
                 pass
 
-#Second manipulation: removing an elements
+        #Second manipulation: removing an elements
         elif user_op == "remove" or user_op == "Remove":
             print("Type in the number you want to remove from your list.")
             print("The first element with this value will be removed.")
@@ -67,16 +66,16 @@ while True:
                     user_list.remove(int(user_input))
                     print(f"This is your new list: {user_list}")
                 else:
-                    print("This element is not found in your list.")
+                    print("This element was not found in your list.")
             else:
                 pass
 
-# Third manipulation: Reversing the lists
+        # Third manipulation: Reversing the lists
         elif user_op == "reverse" or user_op == "Reverse":
                 user_list.reverse()
                 print(f"This is your new list: {user_list}")
 
-# Fourth manipulation: Searching for the index of an entry in the lists
+        # Fourth manipulation: Searching for the index of an entry in the lists
         elif user_op == "index" or user_op == "Index":
             print("Type in the number of which you want to now the index of.")
             user_input = input()
@@ -85,11 +84,11 @@ while True:
                 if int(user_input) in user_list:
                     print(f"The index of element {user_input} is {user_list.index(int(user_input))}")
                 else:
-                    print("This element is not found in your list.")
+                    print("This element was not found in your list.")
             else:
                 pass
 
-# Fifth manipulation: Check for a specific element in the list
+        # Fifth manipulation: Check for a specific element in the list
         elif user_op == "check" or user_op == "Check":
             print("Type in the number you want to check.")
             user_input = input()
@@ -98,11 +97,11 @@ while True:
                 if int(user_input) in user_list:
                     print(f"{user_input} was found in your list")
                 else:
-                    print("This element is not found in your list.")
+                    print("This element was not found in your list.")
             else:
                 pass
 
-# exit the manipulation menu
+        # create a new list
         elif user_op == "new" or user_op == "New":
             tmp = False
 
