@@ -1,6 +1,6 @@
 ## Exercise 72 - Nested ifs
 
-# Rework your program from Exercise 07 with the use of nested if statements instead of the logical operators:
+# Rework your program from Exercise 07 (ComparingNumbers.py) with the use of nested if statements instead of the logical operators:
 # and
 # or
 
