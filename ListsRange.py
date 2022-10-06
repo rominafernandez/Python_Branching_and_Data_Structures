@@ -6,12 +6,9 @@
 # Don‘t forget to print out all three lists at the end
 
 print("At which number should your lists start and end? \nWhich steps do you want those numbers to have inbetween?\nType in those three numbers separated by space.\n")
-len1 = input("First list: ")
-len1 = len1.split()
-len2 = input("Second list: ")
-len2 = len2.split()
-len3 = input("Third list: ")
-len3 = len3.split()
+len1 = input("First list: ").split()
+len2 = input("Second list: ").split()
+len3 = input("Third list: ").split()
 
 List1 = list(range(int(len1[0]), int(len1[1]), int(len1[2])))
 List2 = list(range(int(len2[0]), int(len2[1]), int(len2[2])))
