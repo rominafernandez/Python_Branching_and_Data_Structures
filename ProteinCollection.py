@@ -4,7 +4,7 @@
 # Each entry of the dictionary „proteins“ should contain another dictionary in which the name,
 # the length of the protein, the function and the location are collected
 # The final dictionary should contain information of at least four proteins
-# Print out the final dictionary at the end
+# Print out the final dictionary at the end (in the next exercise)
 import json
 
 Proteins = {}
@@ -17,8 +17,6 @@ Proteins["CDC6"] = {"Name":"Cell division control protein 6 homolog", "Length":5
 Proteins["PSKH1"] = {"Name":"Serine/threonine-protein kinase H1", "Length":424, "Function":"Kinase", "Location":"Chromosome 16"}
 Proteins["MAPK2"] = {"Name":"Mitogen-activated protein kinase 2", "Length":400, "Function":"Kinase", "Location":"Chromosome 1"}
 
-#tmp = json.dumps(Proteins, indent=4)
-#print(tmp)
 
 ## Exercise 19 - Adjusting the Collection
 
@@ -33,81 +31,79 @@ Proteins["MAPK2"] = {"Name":"Mitogen-activated protein kinase 2", "Length":400, 
 print("Here is the Protein dictionary:")
 tmp = json.dumps(Proteins, indent=4)
 print(tmp)
-while True:
-    user_op = input("\nWhat action would you like to perform for the dictionary? \nChoose either search, add, delete or change.\nType q to exit the program.\n")
+
+user_op = input("\nWhat action would you like to perform for the dictionary? \nChoose either search, add, delete or change.\n")
 # Adding to the dictionary. Either a whole new protein or add a new key-value pair to an existing protein
-    if user_op == "add":
-        user_input = input("Do you want to add a whole new protein (new) or add information to an existing protein (add)?\n")
-        if user_input == "new":
-            print("Please provide the information of the protein you want to add.")
-            prot_abbr = input("Abbreviation: ")
-            if prot_abbr in Proteins:
-                print(f"{prot_abbr} already exists in the dictionary! It will not be added to avoid errors.")
-            else:
-                prot_name = input("Full name: ")
-                prot_length = int(input("Length (Amino acids): "))
-                prot_function = input("Function: ")
-                prot_location = input("Location (Chromosome): ")
-                Proteins[prot_abbr] = {"Name":prot_name, "Length":prot_length, "Function":prot_function, "Location":prot_location}
-
-                tmp = json.dumps(Proteins, indent=4)
-                print(f"This is the new dictionary: \n{tmp}")
-        elif user_input == "add":
-            print("Please provide the information you want to add.")
-            prot_abbr = input("Abbreviation: ")
-            if prot_abbr in Proteins:
-                prot_key = input("Key: ")
-                prot_value = input("Value: ")
-                if prot_value.isdigit():
-                    prot_value = int(prot_value)
-                Proteins[prot_abbr][prot_key] = prot_value
-
-                tmp = json.dumps(Proteins, indent=4)
-                print(f"This is the new dictionary: \n{tmp}")
-            else:
-                print(f"{prot_abbr} was not found in the dictionary!")
-        else:
-            print("Invalid Input")
-# Deleting an entry. Asks the user for the abbreviation of the protein, which should be deleted.
-    elif user_op == "delete":
-        prot_abbr= input("Which protein do you want to delete? \nAbbreviation: ")
+if user_op == "add":
+    user_input = input("Do you want to add a whole new protein (new) or add information to an existing protein (add)?\n")
+    if user_input == "new":
+        print("Please provide the information of the protein you want to add.")
+        prot_abbr = input("Abbreviation: ")
         if prot_abbr in Proteins:
-            del Proteins[prot_abbr]
+            print(f"{prot_abbr} already exists in the dictionary! It will not be added to avoid errors.")
+        else:
+            prot_name = input("Full name: ")
+            prot_length = int(input("Length (Amino acids): "))
+            prot_function = input("Function: ")
+            prot_location = input("Location (Chromosome): ")
+            Proteins[prot_abbr] = {"Name":prot_name, "Length":prot_length, "Function":prot_function, "Location":prot_location}
+
+            tmp = json.dumps(Proteins, indent=4)
+            print(f"This is the new dictionary: \n{tmp}")
+    elif user_input == "add":
+        print("Please provide the information you want to add.")
+        prot_abbr = input("Abbreviation: ")
+        if prot_abbr in Proteins:
+            prot_key = input("Key: ")
+            prot_value = input("Value: ")
+            if prot_value.isdigit():
+                prot_value = int(prot_value)
+            Proteins[prot_abbr][prot_key] = prot_value
 
             tmp = json.dumps(Proteins, indent=4)
             print(f"This is the new dictionary: \n{tmp}")
         else:
             print(f"{prot_abbr} was not found in the dictionary!")
-# Changing entries. Can only change values and not keys.
-    elif user_op == "change":
-        prot_abbr = input("Of which protein do you want to change the information?\nAbbreviation: ")
-        if prot_abbr in Proteins:
-            print("Choose from the following list, which part you want to change:")
-            print(*list(Proteins[prot_abbr].keys()), sep=', ')
-            prot_key = input()
-            if prot_key in list(Proteins[prot_abbr].keys()):
-                prot_value = input("New information:")
-                if prot_value.isdigit():
-                    prot_value = int(prot_value)
-                Proteins[prot_abbr][prot_key] = prot_value
-
-                tmp = json.dumps(Proteins, indent=4)
-                print(f"This is the new dictionary: \n{tmp}")
-            else:
-                print(f"{prot_key} is no available key in {prot_abbr}.")
-        else:
-            print(f"{prot_abbr} was not found in the dictionary!")
-# Exit the program
-    elif user_op == "q":
-        exit()
-# Search for a protein
-    elif user_op == "search":
-        prot_abbr = input("Which protein are you looking for? \nAbbreviation: ")
-        if prot_abbr in Proteins:
-            tmp = json.dumps(Proteins[prot_abbr], indent=4)
-            print(f"Here is the entry for {prot_abbr}: \n{tmp}")
-        else:
-            print(f"{prot_abbr} was not found in the dictionary!")
-# Invalid input if none of the above are true
     else:
         print("Invalid Input")
+# Deleting an entry. Asks the user for the abbreviation of the protein, which should be deleted.
+elif user_op == "delete":
+    prot_abbr= input("Which protein do you want to delete? \nAbbreviation: ")
+    if prot_abbr in Proteins:
+        del Proteins[prot_abbr]
+
+        tmp = json.dumps(Proteins, indent=4)
+        print(f"This is the new dictionary: \n{tmp}")
+    else:
+        print(f"{prot_abbr} was not found in the dictionary!")
+# Changing entries. Can only change values and not keys.
+elif user_op == "change":
+    prot_abbr = input("Of which protein do you want to change the information?\nAbbreviation: ")
+    if prot_abbr in Proteins:
+        print("Choose from the following list, which part you want to change:")
+        # prints a changing list depending on the existing keys
+        print(*list(Proteins[prot_abbr].keys()), sep=', ')
+        prot_key = input()
+        if prot_key in list(Proteins[prot_abbr].keys()):
+            prot_value = input("New information:")
+            if prot_value.isdigit():
+                prot_value = int(prot_value)
+            Proteins[prot_abbr][prot_key] = prot_value
+
+            tmp = json.dumps(Proteins, indent=4)
+            print(f"This is the new dictionary: \n{tmp}")
+        else:
+            print(f"{prot_key} is no available key in {prot_abbr}.")
+    else:
+        print(f"{prot_abbr} was not found in the dictionary!")
+# Search for a protein
+elif user_op == "search":
+    prot_abbr = input("Which protein are you looking for? \nAbbreviation: ")
+    if prot_abbr in Proteins:
+        tmp = json.dumps(Proteins[prot_abbr], indent=4)
+        print(f"Here is the entry for {prot_abbr}: \n{tmp}")
+    else:
+        print(f"{prot_abbr} was not found in the dictionary!")
+# Invalid input if none of the above are true
+else:
+    print("Invalid Input")
