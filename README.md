@@ -27,15 +27,15 @@ All exercises done in the branching and data structures part of module 1.
 * Exercise 17 - Searching in dictionaries: [`SearchDicts.py`](https://github.com/rominafernandez/Python_Branching_and_Datastructures/blob/master/SearchDicts.py)
 * Exercise 18 - Protein Collection: [`ProteinCollection.py`](https://github.com/rominafernandez/Python_Branching_and_Datastructures/blob/master/ProteinCollection.py)
 * Exercise 19 - Adjusting the collection: [`ProteinCollection.py`](https://github.com/rominafernandez/Python_Branching_and_Datastructures/blob/master/ProteinCollection.py)
-* Group Exercise 04 - A big dictionary: 
+* Group Exercise 04 - A big dictionary: [`BigDict.py`](https://github.com/rominafernandez/Python_Branching_and_Datastructures/blob/master/BigDict.py)
 
 **Data structures - Tuples**
 * Exercise 20 - Working with tuples: [`Tuples.py`](https://github.com/rominafernandez/Python_Branching_and_Datastructures/blob/master/Tuples.py)
 
 **Data structures - Sets**
 * Exercise 21 - Working with Sets: [`Sets.py`](https://github.com/rominafernandez/Python_Branching_and_Datastructures/blob/master/Sets.py)
-* Exercise 22 - Adding and removing:
+* Exercise 22 - Adding and removing: [`Sets.py`](https://github.com/rominafernandez/Python_Branching_and_Datastructures/blob/master/Sets.py)
 
 **Data structures - Matrices**
-* Exercise 15 - New matrices:
-* Exercise 60:
+* Exercise 15 - New matrices: [`NewMatrices.py`](https://github.com/rominafernandez/Python_Branching_and_Datastructures/blob/master/NewMatrices.py)
+* Exercise 60: [`NewMatrices.py`](https://github.com/rominafernandez/Python_Branching_and_Datastructures/blob/master/NewMatrices.py)
